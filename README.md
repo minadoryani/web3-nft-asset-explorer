@@ -1,85 +1,86 @@
 # Web3 NFT Asset Explorer
 
-## Overview
+A Web3 decentralized application for exploring, managing, and transferring NFT assets on Ethereum.
 
-The Web3 NFT Asset Explorer is a decentralized application (DApp) that allows users to explore, manage, and transfer NFT assets directly on the Ethereum blockchain.
+This project combines a Solidity smart contract, a React frontend, and blockchain data integrations to demonstrate practical Web3 development skills across smart contract interaction, wallet-based NFT management, and frontend architecture.
 
-This project demonstrates the integration of smart contracts, blockchain data APIs, and a modern frontend interface to provide a seamless Web3 experience.
+## Key Features
 
----
-
-## Features
-
-* View all NFTs owned by a wallet address
-* Fetch blockchain data using Moralis API
-* Mint new NFTs with metadata (image, name, description)
-* Transfer NFTs to another wallet
-* Display wallet balances and transaction history
-* Real-time interaction with Ethereum via Thirdweb SDK
-
----
+* Display NFTs owned by a connected wallet
+* Mint new NFTs with metadata
+* Transfer NFTs to another wallet address
+* Integrate blockchain data services for NFT and wallet information
+* Connect frontend and smart contract workflows in a single DApp architecture
 
 ## Tech Stack
 
-### Blockchain
+### Smart Contracts
 
-* Solidity (0.8.24)
+* Solidity
 * Hardhat
-* Alchemy (RPC Provider)
 
 ### Frontend
 
-* React (Vite)
-* Thirdweb SDK
+* React
+* Vite
 * Ethers.js
+* Thirdweb SDK
 
-### APIs
+### Data & Infrastructure
 
-* Moralis NFT API
-* Alchemy API
-
----
+* Ethereum
+* Moralis
+* Alchemy
 
 ## Project Structure
 
 ```
 web3-nft-asset-explorer/
-│
-├── contracts/        # Smart Contracts
-├── scripts/          # Deployment scripts
-├── frontend/         # React frontend
-│   ├── src/
-│   ├── index.html
-│   └── vite.config.js
-│
-├── hardhat.config.js
-├── package.json
-├── README.md
+├── contracts/              
+├── scripts/                
+├── frontend/               
+│   ├── src/                
+│   ├── index.html          
+│   └── vite.config.js      
+├── hardhat.config.cjs      
+├── package.json            
+├── README.md               
+├── .gitignore              
+└── .env.example            
 ```
 
----
+## Technical Scope
 
-## Setup Instructions
+This project was built to demonstrate the following capabilities:
 
-### 1. Install dependencies
+* Smart contract development with Solidity
+* Hardhat-based project setup and deployment workflow
+* Frontend integration for Web3 user interactions
+* NFT-focused wallet features
+* Clean separation between blockchain logic and UI layer
+* Secure environment variable handling using `.env.example` and `.gitignore`
+
+## Local Setup
+
+### Install root dependencies
 
 ```
 npm install
 ```
 
-### 2. Start local blockchain
+### Run local Hardhat node
 
 ```
 npx hardhat node
 ```
 
-### 3. Deploy smart contracts
+### Deploy contract
 
 ```
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-### 4. Start frontend
+### Start frontend
 
 ```
 cd frontend
@@ -87,18 +88,18 @@ npm install
 npm run dev
 ```
 
----
-
 ## Environment Variables
 
-Create a `.env` file in the root directory:
+Create a `.env` file in the project root and add your environment values:
 
 ```
-SEPOLIA_RPC_URL=your_alchemy_url
-PRIVATE_KEY=your_private_key
+SEPOLIA_RPC_URL=your_alchemy_or_sepolia_rpc_url
+PRIVATE_KEY=your_wallet_private_key
 ```
 
----
+## Notes
+
+This repository is presented as a portfolio project to demonstrate practical Ethereum and Web3 development skills, including smart contract integration, frontend architecture, and NFT-related DApp functionality.
 
 ## Author
 
